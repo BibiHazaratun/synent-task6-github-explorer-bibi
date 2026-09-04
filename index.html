@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GitHub Profile Explorer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="page-header">
+  <span class="brand">GH Explorer</span>
+</header>
+
+<main>
+  <section class="search-section">
+    <h1>GitHub Profile Explorer</h1>
+    <p class="subtitle">Search any GitHub username to see their profile and top repositories.</p>
+
+    <form id="searchForm" class="search-form">
+      <input
+        type="text"
+        id="usernameInput"
+        placeholder="Enter GitHub username (e.g. torvalds)"
+        autocomplete="off"
+      />
+      <button type="submit">Search</button>
+    </form>
+  </section>
+
+  <!-- Loading state -->
+  <div id="loadingState" class="state-box hidden">
+    <div class="spinner"></div>
+    <p>Fetching profile…</p>
+  </div>
+
+  <!-- Error state -->
+  <div id="errorState" class="state-box hidden">
+    <p class="error-icon">⚠️</p>
+    <p id="errorMessage">User not found.</p>
+  </div>
+
+  <!-- Profile result -->
+  <section id="profileResult" class="profile-result hidden">
+    <div class="profile-card">
+      <img id="avatar" src="" alt="User avatar" class="avatar" />
+      <div class="profile-info">
+        <h2 id="fullName"></h2>
+        <p id="username" class="handle"></p>
+        <p id="bio" class="bio"></p>
+        <p id="location" class="location"></p>
+        <a id="profileLink" href="#" target="_blank" rel="noopener" class="btn-view">View on GitHub</a>
+      </div>
+    </div>
+
+    <div class="stats-row">
+      <div class="stat">
+        <span id="repoCount" class="stat-num">0</span>
+        <span class="stat-label">Repos</span>
+      </div>
+      <div class="stat">
+        <span id="followerCount" class="stat-num">0</span>
+        <span class="stat-label">Followers</span>
+      </div>
+      <div class="stat">
+        <span id="followingCount" class="stat-num">0</span>
+        <span class="stat-label">Following</span>
+      </div>
+    </div>
+
+    <h3 class="repos-heading">Top Repositories</h3>
+    <div id="repoList" class="repo-list"></div>
+  </section>
+</main>
+
+<footer class="footer">
+  <p>Built by Bibi Hazaratun Nesa — HTML, CSS &amp; JavaScript, GitHub REST API.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
