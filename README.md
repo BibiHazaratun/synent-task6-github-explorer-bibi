@@ -17,7 +17,7 @@ Search any GitHub username to see their public profile — avatar, name, bio, lo
 - [GitHub REST API](https://docs.github.com/en/rest) — `/users/{username}` and `/users/{username}/repos`
 
 ## Live Demo
-[Add your GitHub Pages link here once deployed]
+[Live Demo](https://bibihazaratun.github.io/synent-task6-github-explorer-bibi/)
 
 ## Author
 Bibi Hazaratun Nesa — CSE, Premier University, Chittagong
