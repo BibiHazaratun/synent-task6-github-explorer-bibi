@@ -15,7 +15,10 @@ Search any GitHub username to see their public profile — avatar, name, bio, lo
 ## Tech
 - Plain **HTML5**, **CSS3**, and vanilla **JavaScript** — no framework, no libraries
 - [GitHub REST API](https://docs.github.com/en/rest) — `/users/{username}` and `/users/{username}/repos`
-
+## How to Use
+1. Type any GitHub username into the search box
+2. Click "Search"
+3. View the profile card, stats, and top 5 starred repositories
 ## Live Demo
 [Live Demo](https://bibihazaratun.github.io/synent-task6-github-explorer-bibi/)
 
